@@ -1,0 +1,18 @@
+class FizzyCli < Formula
+  desc "CLI for https://fizzy.do"
+  homepage "https://github.com/rogeriopvl/fizzy-cli"
+  url "https://github.com/rogeriopvl/fizzy-cli/archive/refs/tags/v0.1.0.tar.gz"
+  sha256 "9a38f1fb05bb875f41e15f0a55d3b4fab6001a3984394e22838f727371234c96"
+  license "MIT"
+  head "https://github.com/rogeriopvl/fizzy-cli.git", branch: "main"
+
+  depends_on "go" => :build
+
+  def install
+    system "go", "build", *std_go_args(output: bin/"fizzy", ldflags: "-s -w")
+  end
+
+  test do
+    assert_match "Fizzy CLI", shell_output("#{bin}/fizzy --help")
+  end
+end
