@@ -1,8 +1,8 @@
 class FizzyCli < Formula
   desc "CLI for https://fizzy.do"
   homepage "https://github.com/rogeriopvl/fizzy-cli"
-  url "https://github.com/rogeriopvl/fizzy-cli/archive/refs/tags/v0.6.1.tar.gz"
-  sha256 "84cc427136866fdec5ae4899a7c184b5e439fc5b6ed40d28a3acc8aea6fb5712"
+  url "https://github.com/rogeriopvl/fizzy-cli/archive/refs/tags/v0.7.0.tar.gz"
+  sha256 "1fe65fd82bc904736e7034eb14308ba26f6c491c17de0ba052b4dc5d162db211"
   license "MIT"
   head "https://github.com/rogeriopvl/fizzy-cli.git", branch: "main"
 
