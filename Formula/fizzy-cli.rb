@@ -9,7 +9,11 @@ class FizzyCli < Formula
   depends_on "go" => :build
 
   def install
-    system "go", "build", *std_go_args(output: bin/"fizzy", ldflags: "-s -w")
+    ldflags = %W[
+      -s -w
+      -X github.com/rogeriopvl/fizzy/cmd.Version=#{version}
+    ]
+    system "go", "build", *std_go_args(output: bin/"fizzy", ldflags:)
   end
 
   test do
