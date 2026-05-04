@@ -11,7 +11,7 @@ class FizzyCli < Formula
   def install
     ldflags = %W[
       -s -w
-      -X github.com/rogeriopvl/fizzy/cmd.Version=#{version}
+      -X github.com/rogeriopvl/fizzy-cli/cmd.Version=#{version}
     ]
     system "go", "build", *std_go_args(output: bin/"fizzy", ldflags:)
   end
